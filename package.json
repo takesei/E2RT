@@ -6,6 +6,10 @@
   "repository": "git@github.com:takesei/E2RT.git",
   "author": "take-sei <sei06k14@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "electron ./"
+  },
   "dependencies": {
     "clone": "^2.1.2",
     "react": "^16.8.6",
