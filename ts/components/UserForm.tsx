@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect, MapStateToPropsParam } from 'react-redux';
+import { createChangeUserNameAction } from '../actions/UserNameEvents';
 import IUser from '../states/IUser';
+import store, { IState } from '../Store';
 import { TextBox } from './TextBox';
 
 // ユーザー名を入力して表示する
@@ -18,6 +21,12 @@ class UserForm extends React.Component<IUser, {}> {
   }
 
   private onChangeText = (value: string) => {
-    // will write after creating action/store
+    store.dispatch(createChangeUserNameAction(value));
   }
 }
+
+const MapStateToProps = (state: IState) => {
+    return state.User;
+};
+
+export default connect(MapStateToProps)(UserForm);
