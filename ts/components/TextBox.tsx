@@ -11,7 +11,7 @@ interface IProps {
 
 // Text box w/label
 export class TextBox extends React.Component<IProps, {}> {
-  public rener() {
+  public render() {
     const label = (!!this.props.label) ?
       <label>{this.props.label}</label> :
       null;
