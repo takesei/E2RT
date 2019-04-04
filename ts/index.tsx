@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import { HashRouter, Link, Route } from 'react-router-dom';
+import {About, Demo, Home} from './components/temps'
 
 const container = document.getElementById('contents');
 
