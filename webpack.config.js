@@ -39,7 +39,10 @@ module.exports = {
                 // airbnb というJavaScriptスタイルガイドに従うには下記が必要
                 typeCheck: true,
             },
-        }],
+        }, {
+             test: /\.css$/,
+             loaders: ['style-loader', 'css-loader'],
+           }],
     },
    // 処理対象のファイルを記載する
     resolve: {
