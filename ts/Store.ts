@@ -1,4 +1,6 @@
 import {combineReducers, createStore } from 'redux';
+import {ITaskList} from './states/ITask';
+
 import { UserReducer } from './reducers/UserReducer';
 import IUser from './states/IUser';
 
@@ -10,12 +12,14 @@ import IUser from './states/IUser';
 
 export interface IState {
   User: IUser;
+  taskList: ITaskList;
   // stateが増えたら足していく
 }
 
 // combine several reducers
 const combinedReducer = combineReducers<IState>({
   User: UserReducer,
+  taskList: ITaskList,
   // reducerが増えたら足していく
 });
 
